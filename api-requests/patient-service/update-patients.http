@@ -1,0 +1,13 @@
+
+
+
+PUT localhost:4000/patients/update/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+
+{
+  "name" : "John Doe",
+  "email" : "test2@gmail.com",
+  "address": "123 Main St",
+  "dateOfBirth" : "1990-01-01"
+
+}

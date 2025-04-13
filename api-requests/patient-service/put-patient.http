@@ -1,0 +1,17 @@
+
+
+
+
+
+POST http://localhost:4004/api/patients
+Content-Type: application/json
+
+
+{
+   "name" : "John Doe111",
+    "email" : "Johswn11frrrf12aa1sdds211ss33@gmail.com",
+     "address": "1231 Main St",
+     "dateOfBirth" : "1990-01-01",
+    "registeredDate" : "2023-01-01"
+
+}
