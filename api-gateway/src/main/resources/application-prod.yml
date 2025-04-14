@@ -6,7 +6,7 @@ spring:
     gateway:
       routes:
         - id: patient-service-route
-          uri: http://patient-service:4000
+          uri: http://host.docker.internal:4000
           predicates:
             - Path=/api/patients/**
           filters:
@@ -14,21 +14,21 @@ spring:
             - JwtValidation
 
         - id: api-docs-patient-route
-          uri: http://patient-service:4000
+          uri: http://host.docker.internal:4000
           predicates:
             - Path=/api-docs/patients
           filters:
             - RewritePath=/api-docs/patients, /v3/api-docs
 
         - id : api-doc-auth-route
-          uri: http://auth-service:4005
+          uri: http://host.docker.internal:4005
           predicates:
             - Path=/api-docs/auth
           filters:
             - RewritePath=/api-docs/auth,/v3/api-docs
 
         - id: auth-service-route
-          uri: http://auth-service:4005
+          uri: http://host.docker.internal:4005
           predicates:
             - Path=/auth/**
           filters:

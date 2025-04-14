@@ -12,8 +12,15 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID uuid;
+    private UUID id;
 
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     @Column(unique = true, nullable = false)
     private String email;
@@ -24,13 +31,9 @@ public class User {
     @Column(nullable = false)
     private String role;
 
-    public UUID getUuid() {
-        return uuid;
-    }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
+
+
 
     public String getEmail() {
         return email;
